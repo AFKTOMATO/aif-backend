@@ -20,11 +20,18 @@ app.get('/', (req, res) => {
 });
 
 // Auth routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/user', require('./routes/user'));
-app.use('/api/wallet', require('./routes/wallet'));
-app.use('/api/tasks', require('./routes/tasks'));
-app.use('/api/moments', require('./routes/moments'));
+- app.use('/api/auth',    require('routes/auth'));
+- app.use('/api/user',    require('routes/user'));
+- app.use('/api/wallet',  require('routes/wallet'));
+- app.use('/api/tasks',   require('routes/tasks'));
+- app.use('/api/moments', require('routes/moments'));
++ app.use('/api/auth',    require('./routes/auth'));
++ app.use('/api/user',    require('./routes/user'));
++ app.use('/api/wallet',  require('./routes/wallet'));
++ app.use('/api/tasks',   require('./routes/tasks'));
++ app.use('/api/moments', require('./routes/moments'));
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
